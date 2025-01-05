@@ -48,9 +48,17 @@ class BinarySearchTree {
       return false;
   }
 
-  find(/* data */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  find(data) {
+      let currentElem = this.rootKnot;
+      while(currentElem) {
+          if (data === currentElem.data) {
+              return currentElem;
+          }
+          currentElem = data < currentElem.data ?
+              currentElem.left :
+              currentElem.right
+      }
+      return null;
   }
 
   remove(/* data */) {
