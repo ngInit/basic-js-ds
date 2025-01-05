@@ -31,6 +31,7 @@ class Queue {
     } else {
         this.head = queueList;
     }
+    this.tail = queueList;
     this.length++;
   }
 
