@@ -75,8 +75,11 @@ class BinarySearchTree {
   }
 
   max() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    let currentElem = this.rootKnot;
+    while (currentElem.right) {
+        currentElem = currentElem.right
+    }
+    return currentElem.data;
   }
 }
 
