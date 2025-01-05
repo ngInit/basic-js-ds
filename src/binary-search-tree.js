@@ -22,13 +22,13 @@ class BinarySearchTree {
         if (!node) {
             return new Node(data);
         }
-        if (node.value === data) {
+        if (node.data === data) {
             return node;
         }
-        if (data < node.value) {
+        if (data < node.data) {
             node.left = addElem(node.left, data);
         }
-        if (data > node.value) {
+        if (data > node.data) {
             node.right = addElem(node.right, data);
         }
         return node;
