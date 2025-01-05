@@ -16,10 +16,11 @@ const { ListNode } = require('../extensions/list-node.js');
 class Queue {
   constructor() {
       this.length = 0;
+      this.head = 0;
   }
 
   getUnderlyingList() {
-    return this.length;
+    return this.head;
   }
 
   enqueue(/* value */) {
