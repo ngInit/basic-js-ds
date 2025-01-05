@@ -17,15 +17,21 @@ class Queue {
   constructor() {
       this.length = 0;
       this.head = 0;
+      this.tail = 0;
   }
 
   getUnderlyingList() {
     return this.head;
   }
 
-  enqueue(/* value */) {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+  enqueue(value) {
+    const queueList = new ListNode(value);
+    if (this.head) {
+        this.tail.next = queueList;
+    } else {
+        this.head = queueList;
+    }
+    this.length++;
   }
 
   dequeue() {
