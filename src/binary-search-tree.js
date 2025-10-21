@@ -14,9 +14,24 @@ class BinarySearchTree {
     return this.rootKnot;
   }
 
-  add(/* data */) {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+  add(data) {
+    this.rootKnot = addElem(this.rootKnot, data);
+
+    function addElem(node, data) {
+      if (!node) {
+        return new Node(data);
+      }
+      if (node.data === data) {
+        return node;
+      }
+      if (data < node.data) {
+        node.left = addElem(node.left, data);
+      }
+      if (data > node.data) {
+        node.right = addElem(node.right, data);
+      }
+      return node;
+    }
   }
 
   find(/* data */) {
