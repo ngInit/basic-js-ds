@@ -13,6 +13,12 @@ const { ListNode } = require('../extensions/list-node.js');
  * queue.getUnderlyingList() // returns { value: 3, next: null }
  */
 class Queue {
+  constructor() {
+    this.length = 0;
+    this.head = 0;
+    this.tail = 0;
+  }
+
   getUnderlyingList() {
     // Remove line below and write your code here
     throw new NotImplementedError('Not implemented');
