@@ -20,8 +20,7 @@ class Queue {
   }
 
   getUnderlyingList() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    return this.head === 0 ? null : this.head;
   }
 
   enqueue(/* value */) {
