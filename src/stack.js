@@ -17,9 +17,8 @@ class Stack {
     this.stack = [];
   }
 
-  push(/* value */) {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+  push(element) {
+    this.stack.push(element);
   }
 
   pop() {
