@@ -6,6 +6,10 @@ const { NotImplementedError } = require('../lib/errors');
 * using Node from extensions
 */
 class BinarySearchTree {
+  constructor() {
+    this.rootKnot = null;
+  }
+
   root() {
     // Remove line below and write your code here
     throw new NotImplementedError('Not implemented');
