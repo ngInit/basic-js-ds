@@ -60,10 +60,38 @@ class BinarySearchTree {
     return null;
   }
 
+  remove(data) {
+    let currentElem = this.rootKnot;
+    if(!currentElem || (!currentElem.left && !currentElem.right)) {
+      return null;
+    }
+    this.rootKnot = removeElem(currentElem, data);
 
-  remove(/* data */) {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    function removeElem(node, data) {
+      if(data < node.data) {
+        node.left = removeElem(node.left, data);
+        return node
+      } else if(data > node.data) {
+        node.right = removeElem(node.right, data);
+        return node
+      } else {
+        if(!node.left) {
+          node = node.right;
+          return node;
+        }
+        if(!node.right) {
+          node = node.left;
+          return node;
+        }
+        let minFromRight = node.right;
+        while (minFromRight.left) {
+          minFromRight = minFromRight.left;
+        }
+        node.data = minFromRight.data;
+        node.right = removeElem(node.right, minFromRight.data);
+        return node;
+      }
+    }
   }
 
   min() {
