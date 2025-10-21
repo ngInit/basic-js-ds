@@ -36,8 +36,10 @@ class Queue {
   }
 
   dequeue() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    const currentElem = this.head;
+    this.head = this.head.next;
+    this.length--;
+    return currentElem.value;
   }
 }
 
