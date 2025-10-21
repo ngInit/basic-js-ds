@@ -22,8 +22,7 @@ class Stack {
   }
 
   pop() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    return this.stack.pop();
   }
 
   peek() {
